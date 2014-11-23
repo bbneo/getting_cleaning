@@ -16,7 +16,7 @@ $ unzip getdata_projectfiles_UCI HAR Dataset.zip  # on a Linux system
 This will create the `UCI HAR Dataset` directory in the directory containing `run_analysis.R`.
 
 
-# Subsetting for *mean* and *std* feature variables
+## Subsetting for *mean* and *std* feature variables
 
 Subsetting the feature list to those feature variables (see `CodeBook.md`) with *mean* or *std* in
 their names was a tripping point for me. My procedure relies on the user having already *created a 
