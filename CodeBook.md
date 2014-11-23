@@ -65,7 +65,9 @@ tBodyGyroJerkMean
 
 
 This is a detailed list of the variables in the tidyData. This list was 
-generated with: `write.table(names(tidyData), quote=F, sep=" ")`
+generated with: 
+
+`write.table(names(tidyData), quote=F, sep=" ")`
 
 
 ```
