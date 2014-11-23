@@ -23,6 +23,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
+```
 tBodyAcc-XYZ
 tGravityAcc-XYZ
 tBodyAccJerk-XYZ
@@ -40,19 +41,24 @@ fBodyAccMag
 fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
+```
 
 The set of variables that were estimated from these signals are: 
 
+```
 mean(): Mean value
 std(): Standard deviation
+```
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
+```
 gravityMean
 tBodyAccMean
 tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
+```
 
 
 # Detailed list of feature variables in `tidyData.csv`
@@ -62,12 +68,14 @@ This is a detailed list of the variables in the tidyData. This list was
 generated with: `write.table(names(tidyData), quote=F, sep=" ")`
 
 
+```
 1 subjID
   * a subject identifier ranges from 1-30
 
 2 actName
   * the activity of a feature set, one of:
     * LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
+```
 
 
 Feature variables 3-88 below are **mean values** of those features described above 
