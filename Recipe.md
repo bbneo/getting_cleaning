@@ -7,7 +7,9 @@ my `run_analysis.R` script and process.
 Brad Banko, 11/24/2014
 
 
-## Unpack the [raw data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) **into the directory** with the `run_analysis.R` script.
+## Unpack the [raw data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+
+into the directory with the `run_analysis.R` script.
 
 ```
 $ unzip getdata_projectfiles_UCI HAR Dataset.zip  # on a Linux system
