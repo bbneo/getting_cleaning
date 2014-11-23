@@ -42,11 +42,11 @@ $ R
 ## Source the script:
 
 ```
-\> source("run_analysis.R")
+source("run_analysis.R")
 ```
 
-## The resulting tidy data set dataframe is `tidyData`, and the .csv file is written to the starting
-directory as `tidyData.csv`.
+The resulting tidy data set **dataframe is `tidyData`**, and the .csv file is written to the starting
+directory as **`tidyData.csv`**.
 
 
 **Voila!**
@@ -79,8 +79,5 @@ Save workspace image? [y/n/c]: y
 1,"WALKING",-0.14725721806875,-0.200806438327957,-0.158598637678495,-0.187864152
 
 ```
-
-
-
 
 
