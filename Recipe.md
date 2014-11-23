@@ -7,7 +7,7 @@ my `run_analysis.R` script and process.
 Brad Banko, 11/24/2014
 
 
-1. Unpack the [raw data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) **into the directory** with the `run_analysis.R` script.
+## Unpack the [raw data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) **into the directory** with the `run_analysis.R` script.
 
 ```
 $ unzip getdata_projectfiles_UCI HAR Dataset.zip  # on a Linux system
@@ -16,7 +16,7 @@ $ unzip getdata_projectfiles_UCI HAR Dataset.zip  # on a Linux system
 This will create the `UCI HAR Dataset` directory in the directory containing `run_analysis.R`.
 
 
-## Subsetting for *mean* and *std* feature variables
+### Subsetting for *mean* and *std* feature variables
 
 Subsetting the feature list to those feature variables (see `CodeBook.md`) with *mean* or *std* in
 their names was a tripping point for me. My procedure relies on the user having already *created a 
@@ -33,23 +33,23 @@ $ grep -i 'mean\|std' features.txt > mean_std_features.lst
 case insensitive.  (86 altogether)
 
 
-2. Start R:
+## Start R:
 
 ```
 $ R
 ```
 
-3. Source the script:
+## Source the script:
 
 ```
 \> source("run_analysis.R")
 ```
 
-4. The resulting tidy data set dataframe is `tidyData`, and the .csv file is written to the starting
+## The resulting tidy data set dataframe is `tidyData`, and the .csv file is written to the starting
 directory as `tidyData.csv`.
 
 
-Voila!
+**Voila!**
 
 
 ```
