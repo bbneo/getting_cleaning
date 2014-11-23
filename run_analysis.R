@@ -1,10 +1,12 @@
 #
-#  This will be my R script to analyze and merge the smartphone data
-#  to analyze and merge the smartphone dataset for the Course Project
+#  run_analysis.R
 #
-#  Brad Banko, 11/17/2014
+#  This R script will subset, merge and summarize the smartphone dataset
+#  for the Getting and Cleaning Data Course Project
 #
-# 
+#  Brad Banko, 11/23/2014
+#
+###
 # The purpose of this project is to demonstrate your ability to collect, work
 # with, and clean a data set. The goal is to prepare tidy data that can be used
 # for later analysis. You will be graded by your peers on a series of yes/no
@@ -34,14 +36,15 @@
 #     with the average of each variable for each activity and each subject.
 #     
 # Good luck!
-# 
+##
 
+require(reshape2)
 
 #
 # start in the root directory:  setwd("UCI HAR Dataset/")
 #
 
-rootdir <- "~/Dropbox/Courses/Getting_and_Cleaning_Data//CourseProject//getting_cleaning//UCI HAR Dataset"
+rootdir <- "./UCI HAR Dataset"
 
 setwd(rootdir)
 
@@ -61,6 +64,7 @@ setwd(rootdir)
 #
 # grep -i 'mean\|std' features.txt > mean_std_features.lst
 #
+
 featureNames <- read.table("./features.txt", header = F, sep=" ",
                            stringsAsFactors=F)
 names(featureNames) <- c("featId", "featName")
@@ -138,6 +142,14 @@ dataTrain2 <- merge(activityNames, dataTrain2, by="activId")
 
 mergedData <- merge(dataTest2, dataTrain2, all=T)
 
-library(data.table)
+library(reshape2)
+
+dataMelt <- melt(mergedData, id=c("subjID","actName"), 
+                 measure.vars=stdmeanNames$featName)
+
+tidyData <- dcast(dataMelt, subjID + actName ~ stdmeanNames$featName, mean)
+
+write.csv(tidyData, file="../tidyData.csv", row.names=F)
+
 
 
