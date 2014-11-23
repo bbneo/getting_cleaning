@@ -112,7 +112,7 @@ over on the order of 40-80 measurements for each subset of subjID and actName:
 
 Mean Value Feature Variables
 ============================
-
+```
 3 angle(tBodyAccJerkMean),gravityMean)
 4 angle(tBodyAccMean,gravity)
 5 angle(tBodyGyroJerkMean,gravityMean)
@@ -199,5 +199,5 @@ Mean Value Feature Variables
 86 tGravityAcc-std()-Z
 87 tGravityAccMag-mean()
 88 tGravityAccMag-std()
-
+```
 
